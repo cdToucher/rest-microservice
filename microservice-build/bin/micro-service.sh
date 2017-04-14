@@ -8,7 +8,7 @@ JAVA_DIR=
 # Java opts
 JAVA_OPTSS=
 
-MAIN_CLASS=uyun.octopus.openApi.core.entry.ApplicationEntry
+MAIN_CLASS=me.myProjects.microservice.core.entry.ApplicationEntry
 
 CURRENT_DIR=$(cd "$(dirname "$0")"; pwd)  
 cd $CURRENT_DIR

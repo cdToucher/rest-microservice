@@ -4,6 +4,7 @@ package me.myProjects.microservice.core.constant;
 import me.myProjects.microservice.core.utils.ParamsHolder;
 import me.myProjects.microservice.core.validator.Validator;
 
+import static me.myProjects.microservice.core.constant.RequestParam.API_KEY;
 import static me.myProjects.microservice.core.constant.RequestParam.TENANT_ID;
 
 
@@ -14,7 +15,7 @@ import static me.myProjects.microservice.core.constant.RequestParam.TENANT_ID;
  */
 public enum MethodParameters {
 
-    REST_TEST("restTest", TENANT_ID);
+    REST_TEST("restTest", API_KEY, TENANT_ID);
 
     private String method;//对应的aop方法名字
 

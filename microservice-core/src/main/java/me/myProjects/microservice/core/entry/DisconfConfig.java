@@ -24,7 +24,7 @@ public class DisconfConfig {
     @Bean(destroyMethod = "destroy")
     public static DisconfMgrBean disconfMgrBean() {
         DisconfMgrBean bean = new DisconfMgrBean();
-        bean.setScanPackage("uyun.octopus.openApi.core.bean");
+        bean.setScanPackage("me.myProjects.microservice.core.bean");
         return bean;
     }
 

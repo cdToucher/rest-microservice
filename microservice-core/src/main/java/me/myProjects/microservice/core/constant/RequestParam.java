@@ -20,8 +20,7 @@ public enum RequestParam {
     PAGE_SIZE("page_size", false, NotEmptyValidator.validator, NumberValidator.validator, new IntRangeValidator(1, 500)),
     START_TIME("start_time", true, NotEmptyValidator.validator, TimestampValidator.validator),
     END_TIME("end_time", true, NotEmptyValidator.validator, TimestampValidator.validator),
-    STATUS("status", true, NotEmptyValidator.validator, new StringRangeValidator("0", "1")),
-    DATA_TYPE("data_type", false, NotEmptyValidator.validator, new StringArrayValidator(MetricDataType.dataTypes));
+    STATUS("status", true, NotEmptyValidator.validator, new StringRangeValidator("0", "1"));
 
     public String getName() {
         return name;

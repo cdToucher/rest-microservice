@@ -10,9 +10,9 @@
     <version>1.0.0-SNAPSHOT</version>
 
     <modules>
+        <module>microservice-core</module>
         <module>microservice-api</module>
         <module>microservice-build</module>
-        <module>microservice-core</module>
     </modules>
 
     <properties>
@@ -20,8 +20,9 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
         <spring.boot.version>1.4.2.RELEASE</spring.boot.version>
+        <lib.dir>../microservice-build/lib</lib.dir>
+        <cfg.dir>../microservice-build/conf</cfg.dir>
     </properties>
-
 
     <build>
         <plugins>

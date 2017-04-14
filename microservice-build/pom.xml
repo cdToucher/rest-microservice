@@ -12,7 +12,6 @@
     <artifactId>microservice-build</artifactId>
     <packaging>pom</packaging>
     <name>${project.artifactId}</name>
-    <url>http://www.uyun.cn</url>
     <description>打包模块</description>
 
     <build>

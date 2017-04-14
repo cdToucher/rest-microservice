@@ -28,7 +28,7 @@ public class ParamsValidatorHandler {
     private static final Logger log = LoggerFactory.getLogger(ParamsValidatorHandler.class);
 
     /* 声明切入点：此处定义后仅作为标示符用  */
-    @Pointcut("execution(public * uyun.octopus.openApi.core.controller.*.*(..))")
+    @Pointcut("execution(public * me.myProjects.microservice.core.controller.*.*(..))")
     public void pointcut() {
 
     }
