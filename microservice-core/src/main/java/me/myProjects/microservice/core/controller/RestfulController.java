@@ -1,6 +1,7 @@
 package me.myProjects.microservice.core.controller;
 
 import com.alibaba.fastjson.JSON;
+import me.myProjects.microservice.core.bean.orm.UserInfo;
 import me.myProjects.microservice.core.dao.UserDao;
 import me.myProjects.microservice.core.utils.ParamsHolder;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -34,16 +35,14 @@ public class RestfulController {
 
         int successNum = 0;
 
-/*
-        UserInfo userInfo = new UserInfo();
+/*        UserInfo userInfo = new UserInfo();
         userInfo.setName("test");
         userInfo.setEmail("614141165@qq.com");
         userInfo.setPhone("18700000000");
         userInfo.setDescription("something");
-        successNum = userDao.addUser(userInfo);
-*/
+        successNum = userDao.addUser(userInfo);*/
 
-        successNum = userDao.deleteUser("1");
+        userDao.deleteUser(4);
 
         String tenantId = ParamsHolder.getParamString(TENANT_ID.getName());
         Map<String, Object> map = new HashMap<>();

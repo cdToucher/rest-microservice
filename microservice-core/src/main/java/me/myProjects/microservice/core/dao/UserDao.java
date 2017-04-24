@@ -16,7 +16,7 @@ public interface UserDao {
 
     int updateUser(UserInfo info);
 
-    int deleteUser(String id);
+    void deleteUser(long id);
 
     UserInfo queryUserById(List<Long> ids);
 

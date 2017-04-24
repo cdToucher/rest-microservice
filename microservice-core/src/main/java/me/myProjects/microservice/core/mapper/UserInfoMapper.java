@@ -17,10 +17,10 @@ public interface UserInfoMapper {
     int insert(UserInfo userInfo);
 
     @SelectProvider(type = SqlBuilder.class, method = "getDeleteByIdsSql")
-    int deleteById(@Param("id") String id);
+    void deleteById(@Param("id") long id);
 
     class SqlBuilder {
-        public String getDeleteByIdsSql(@Param("id") String id) { // 这里的 @param 是必要的
+        public String getDeleteByIdsSql(@Param("id") long id) { // 这里的 @param 是必要的
             return "delete from user_info where id =" + id;
         }
     }
