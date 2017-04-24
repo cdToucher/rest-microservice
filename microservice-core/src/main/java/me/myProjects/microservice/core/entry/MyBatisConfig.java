@@ -13,6 +13,12 @@ import javax.sql.DataSource;
  * <p>
  * myBatis config beans
  * <p>
+ * 可用配置mapper文件代替 配置如下:
+ * 指定bean所在包
+ * mybatis.type-aliases-package=com.dudu.domain
+ * 指定映射文件
+ * mybatis.mapperLocations=classpath:mapper/*.xml
+ * <p>
  * spring 会自动替换成 自己声明的 dataSource
  */
 @Configuration
