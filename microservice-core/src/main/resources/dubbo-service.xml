@@ -7,7 +7,7 @@
 	   http://code.alibabatech.com/schema/dubbo
 	     http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
 
-    <dubbo:application name="octopus-openApi"/>
+    <dubbo:application name="restTest"/>
     <dubbo:registry address="zookeeper://${zk.address}" timeout="30000"/>
     <!--dubbo 监控 dubbox 改进版本中有用到-->
     <!--<dubbo:monitor protocol="registry" enable="${dubbo.monitor.enable}"/>-->

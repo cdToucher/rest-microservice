@@ -1,4 +1,4 @@
-package me.myProjects.microservice.core.entry;
+package me.myProjects.microservice.core.aspect;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
