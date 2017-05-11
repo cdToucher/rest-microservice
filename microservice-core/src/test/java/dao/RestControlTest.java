@@ -25,7 +25,7 @@ public class RestControlTest {
     private RestfulController controller;
 
     @Test
-    public void test() {
+    public void test() throws InterruptedException {
 
         controller.restTest();
     }

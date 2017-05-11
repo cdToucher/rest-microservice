@@ -7,6 +7,7 @@ import org.springframework.context.ApplicationContextAware;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.ImportResource;
+import org.springframework.scheduling.annotation.EnableAsync;
 
 /**
  * Created by chendong on 2016/12/14.
@@ -17,6 +18,7 @@ import org.springframework.context.annotation.ImportResource;
 @MapperScan("me.myProjects.microservice.core.mapper")
 @Configuration
 @ImportResource({"classpath:dubbo-service.xml"})
+@EnableAsync
 public class ApplicationConfig implements ApplicationContextAware {
 
     public static ApplicationContext getCtx() {
