@@ -34,7 +34,6 @@ public class UserDaoImpl implements UserDao {
         return 0;
     }
 
-
     @Override
     public void deleteUser(long id) {
          mapper.deleteById(id);
