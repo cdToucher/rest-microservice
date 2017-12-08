@@ -32,7 +32,7 @@ public class RestfulController {
     }
 
 
-    @RequestMapping(value = {"/test", ""}, method = {RequestMethod.GET}, produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+    @RequestMapping(value = {"/test"}, method = {RequestMethod.GET}, produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
     public String restTest() throws InterruptedException {
 
         int successNum = 0;
