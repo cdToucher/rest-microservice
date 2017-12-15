@@ -71,18 +71,15 @@ public class DummyInterceptor implements HandlerInterceptor {
         String contentType = request.getHeader("content-type");
         if (contentType != null && contentType.startsWith("multipart/form-data;")) { // form-data 格式解析
             ServletFileUpload upload = new ServletFileUpload(new DiskFileItemFactory());
-            Map<String, List<FileItem>> formDataParamMap = upload.parseParameterMap(request);
-            for (Map.Entry<String, List<FileItem>> entry : formDataParamMap.entrySet()) {
-                String key = entry.getKey();
-                List<FileItem> valueList = entry.getValue();
-                FileItem item = valueList.get(0);
+            for (Map.Entry<String, List<FileItem>> entry : upload.parseParameterMap(request).entrySet()) {
+                FileItem item = entry.getValue().get(0);
                 Object value;
-                if (item.getContentType() != null && item.getContentType().startsWith("image/png")) { // 这里暂时只解析 text 或者image/png 编码的,否则会报错
+                if (item.getContentType() != null && item.getContentType().startsWith("image/png")) {
                     value = item.get();
                 } else {
                     value = new String(item.get(), Charset.defaultCharset());
                 }
-                ParamsHolder.setParameter(key, value);
+                ParamsHolder.setParameter(entry.getKey(), value);
             }
         } else {
             Enumeration paramNames = request.getParameterNames();
