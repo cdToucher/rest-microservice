@@ -41,7 +41,7 @@ public class SimpleCORSFilter implements Filter {
         response.addHeader(ACCESS_CONTROL_ALLOW_METHODS, "GET, POST, PUT, DELETE, UPDATE, OPTIONS, HEAD, PROPFIND");
         response.addHeader(ACCESS_CONTROL_ALLOW_HEADERS, "Overwrite, Destination, Content-Type, Depth, User-Agent, X-File-Size, X-Requested-With, If-Modified-Since, X-File-Name, Cache-Control");
         response.addHeader(ACCESS_CONTROL_MAX_AGE, "1728000");
-        response.addHeader(CONTENT_TYPE, "application/json;charset=UTF-8");
+//        response.addHeader(CONTENT_TYPE, "application/json;charset=UTF-8");
         filterChain.doFilter(servletRequest, response);
     }
 
